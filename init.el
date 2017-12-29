@@ -199,7 +199,6 @@
 ;; Enable whitespace mode
 (setq whitespace-line-column 120)
 (setq global-whitespace-mode t)
-;(global-whitespace-mode 1)
 
 ;; Set Home and End key bindings
 (global-set-key (kbd "<home>") 'beginning-of-line)
