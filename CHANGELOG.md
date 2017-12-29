@@ -2,7 +2,7 @@
 
 ## TODO
 
-None
+- [Todo] Add inf-clojure (Inferior Clojure mode)
 
 
 ## [WIP] 0.2.0 / 2017-December-??
