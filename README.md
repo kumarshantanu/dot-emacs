@@ -31,7 +31,7 @@ If you do not want whitespace markers, put the following to `init-user.el`:
 
 Shrink contiguous whitespace into single space: `C-M-SPC` (Ctrl+Alt+Space)
 
-Show/hide NeoTree: `F8` (`F9` to refresh)
+NeoTree: `F8` Show/hide, `F9` Refresh, Doc: https://github.com/jaypei/emacs-neotree
 
 Close current buffer and window: `s-w` (Cmd+w)
 
