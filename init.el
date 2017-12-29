@@ -198,7 +198,7 @@
 
 ;; Enable whitespace mode
 (setq whitespace-line-column 120)
-(setq global-whitespace-mode t)
+(global-whitespace-mode 1)
 
 (use-package crux
   :ensure t)
