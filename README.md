@@ -23,8 +23,6 @@ Create a file `init-user.el` file with custom changes.
 
 ## Usage
 
-Beginning of non-whitespace in current line: `M-m` (`'back-to-indentation`)
-
 Shrink contiguous whitespace into single space: `C-M-SPC` (Ctrl+Alt+Space)
 
 Show/hide NeoTree: `F8` (`F9` to refresh)

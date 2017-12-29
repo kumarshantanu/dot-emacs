@@ -200,8 +200,13 @@
 (setq whitespace-line-column 120)
 (setq global-whitespace-mode t)
 
+(use-package crux
+  :ensure t)
+(require 'crux)
+(global-set-key [remap move-beginning-of-line] #'crux-move-beginning-of-line)
+
 ;; Set Home and End key bindings
-(global-set-key (kbd "<home>") 'beginning-of-line)
+(global-set-key (kbd "<home>") 'move-beginning-of-line) ; was 'beginning-of-line
 (global-set-key (kbd "<end>") 'end-of-line)
 
 ;; C-M-space should remove multiple whitespace lines into a single blank

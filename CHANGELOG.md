@@ -8,6 +8,7 @@ None
 ## [WIP] 0.2.0 / 2017-December-??
 
 - Set Home/End keys to behave as beginning/end of line respectively
+  - Let Home key alternate between beginning of line and first column
 - Enable column number display for every line in all buffers
 - Display whitespace with highlight on exceeding width threshold
 - Compress multi-whitespace lines in one keystroke (Ctrl+Alt+Space)
