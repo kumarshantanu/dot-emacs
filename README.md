@@ -16,6 +16,17 @@ Based on https://gitlab.com/nilenso/dotemacs and some additions.
 3. Starts Emacs and let it download and setup everything.
 
 
+## Customization
+
+Create a file `init-user.el` file with custom changes.
+
+
 ## Usage
 
 Projectile help page: `C-c p C-h`
+
+Shrink contiguous whitespace into single space: `C-M-SPC` (Ctrl+Alt+Space)
+
+Show/hide NeoTree: `F8` (`F9` to refresh)
+
+Close current buffer and window: `s-w` (Cmd+w)

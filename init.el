@@ -1,4 +1,4 @@
-;; A minimial setup for Clojurians
+;; A lean setup for Clojurians
 
 
 (require 'package)
@@ -189,6 +189,74 @@
 
 ;; Magit: The only git interface you'll ever need
 (use-package magit :ensure t)
+
+
+;; ----- Added by Shantanu this point onward -----
+
+;; Enable column numbers
+(setq column-number-mode t)
+
+;; Enable whitespace mode
+(setq whitespace-line-column 120)
+(setq global-whitespace-mode t)
+;(global-whitespace-mode 1)
+
+;; Set Home and End key bindings
+(global-set-key (kbd "<home>") 'beginning-of-line)
+(global-set-key (kbd "<end>") 'end-of-line)
+
+;; C-M-space should remove multiple whitespace lines into a single blank
+;; character
+(defun multi-line-just-one-space (&optional n)
+  "Multi-line version of just-one-space: Delete all
+  spaces, tabs and newlines around point,
+  leaving one space (or N spaces)."
+  (interactive "*p")
+  (let ((orig-pos (point)))
+    (skip-chars-backward " \t\n")
+    (constrain-to-field nil orig-pos)
+    (dotimes (i (or n 1))
+      (if (= (following-char) ?\s)
+    (forward-char 1)
+  (insert ?\s)))
+    (delete-region
+     (point)
+     (progn
+       (skip-chars-forward " \t\n")
+       (constrain-to-field nil orig-pos t)))))
+(global-set-key (kbd "C-M-SPC") 'multi-line-just-one-space)
+
+;; Strictly 2-space indentation
+(setq-default indent-tabs-mode nil)
+(setq clojure-defun-style-default-indent t)
+(setq clojure-indent-style :always-indent)
+(eval-after-load "clojure-mode"
+   '(progn
+      (define-clojure-indent
+        (:require 0)
+        (:import 0))))
+
+;; markdown
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
+
+;; neotree
+(use-package neotree
+  :ensure t)
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+(global-set-key [f9] 'neotree-refresh)
+
+;; Kill window and buffer in one keystroke
+(global-set-key (kbd "s-w") 'kill-buffer-and-window)
+
+;; ----- Added by Shantanu till this point -----
+
 
 ;; User customizations
 (when (file-exists-p "~/.emacs.d/init-user.el")
