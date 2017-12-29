@@ -20,6 +20,12 @@ Based on https://gitlab.com/nilenso/dotemacs and some additions.
 
 Create a file `init-user.el` file with custom changes.
 
+If you do not want whitespace markers, put the following to `init-user.el`:
+
+```clojure
+(global-whitespace-mode 0)
+```
+
 
 ## Usage
 
