@@ -129,6 +129,7 @@
 ;; Cider integrates a Clojure buffer with a REPL
 (use-package cider
   :ensure t
+  :pin melpa-stable
   :init
   (setq cider-repl-pop-to-buffer-on-connect t
         cider-show-error-buffer t
@@ -158,6 +159,7 @@
 ;; Adds some niceties/refactoring support
 (use-package clj-refactor
   :ensure t
+  :pin melpa-stable
   :config
   (add-hook 'clojure-mode-hook
             (lambda ()
