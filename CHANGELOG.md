@@ -17,6 +17,7 @@
 - Enable strictly 2-space auto indentation
 - Close buffer and window in one keystroke (Cmd+w)
 - Save and restore window layout by default
+- Enable buffer tabs by default
 - Pin Clojure extensions to stable versions
   - Cider
   - Clj-refactor

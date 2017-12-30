@@ -264,6 +264,43 @@
 ;; Save and restore window layout
 (desktop-save-mode 1)
 
+;; buffer tabs
+(use-package tabbar
+  :ensure t)
+(require 'tabbar)
+(set-face-attribute
+   'tabbar-default nil
+    :background "gray60")
+(set-face-attribute
+   'tabbar-unselected nil
+    :background "gray85"
+     :foreground "gray30"
+      :box nil)
+(set-face-attribute
+   'tabbar-selected nil
+    :background "#f2f2f6"
+     :foreground "black"
+      :box nil)
+(set-face-attribute
+   'tabbar-button nil
+    :box '(:line-width 1 :color "gray72" :style released-button))
+(set-face-attribute
+   'tabbar-separator nil
+    :height 0.7)
+(tabbar-mode 1)
+;(tabbar-mode)
+(global-set-key [(control shift tab)] 'tabbar-backward)
+(global-set-key [(control tab)]       'tabbar-forward)
+
+;; tabbar ruler
+(use-package tabbar-ruler
+  :ensure t)
+(require 'tabbar-ruler)
+(setq tabbar-ruler-global-tabbar 't) ; If you want tabbar
+;(setq tabbar-ruler-global-ruler 't) ; if you want a global ruler
+;(setq tabbar-ruler-popup-menu 't) ; If you want a popup menu.
+;(setq tabbar-ruler-popup-toolbar 't) ; If you want a popup toolbar
+
 ;; ----- Added by Shantanu till this point -----
 
 
