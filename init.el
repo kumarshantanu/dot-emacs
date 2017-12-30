@@ -1,4 +1,4 @@
-;; A minimial setup for Clojurians
+;; A lean setup for Clojurians
 
 
 (require 'package)
@@ -129,6 +129,7 @@
 ;; Cider integrates a Clojure buffer with a REPL
 (use-package cider
   :ensure t
+  :pin melpa-stable
   :init
   (setq cider-repl-pop-to-buffer-on-connect t
         cider-show-error-buffer t
@@ -158,6 +159,7 @@
 ;; Adds some niceties/refactoring support
 (use-package clj-refactor
   :ensure t
+  :pin melpa-stable
   :config
   (add-hook 'clojure-mode-hook
             (lambda ()
@@ -189,6 +191,118 @@
 
 ;; Magit: The only git interface you'll ever need
 (use-package magit :ensure t)
+
+
+;; ----- Added by Shantanu this point onward -----
+
+;; Enable column numbers
+(setq column-number-mode t)
+
+;; Enable whitespace mode
+(setq whitespace-line-column 120)
+(global-whitespace-mode 1)
+
+(use-package crux
+  :ensure t)
+(require 'crux)
+(global-set-key [remap move-beginning-of-line] #'crux-move-beginning-of-line)
+
+;; Set Home and End key bindings
+(global-set-key (kbd "<home>") 'move-beginning-of-line) ; was 'beginning-of-line
+(global-set-key (kbd "<end>") 'end-of-line)
+
+;; C-M-space should remove multiple whitespace lines into a single blank
+;; character
+(defun multi-line-just-one-space (&optional n)
+  "Multi-line version of just-one-space: Delete all
+  spaces, tabs and newlines around point,
+  leaving one space (or N spaces)."
+  (interactive "*p")
+  (let ((orig-pos (point)))
+    (skip-chars-backward " \t\n")
+    (constrain-to-field nil orig-pos)
+    (dotimes (i (or n 1))
+      (if (= (following-char) ?\s)
+    (forward-char 1)
+  (insert ?\s)))
+    (delete-region
+     (point)
+     (progn
+       (skip-chars-forward " \t\n")
+       (constrain-to-field nil orig-pos t)))))
+(global-set-key (kbd "C-M-SPC") 'multi-line-just-one-space)
+
+;; Strictly 2-space indentation
+(setq-default indent-tabs-mode nil)
+(setq clojure-defun-style-default-indent t)
+(setq clojure-indent-style :always-indent)
+(eval-after-load "clojure-mode"
+   '(progn
+      (define-clojure-indent
+        (:require 0)
+        (:import 0))))
+
+;; markdown
+(use-package markdown-mode
+  :ensure t
+  :commands (markdown-mode gfm-mode)
+  :mode (("README\\.md\\'" . gfm-mode)
+         ("\\.md\\'" . markdown-mode)
+         ("\\.markdown\\'" . markdown-mode))
+  :init (setq markdown-command "multimarkdown"))
+
+;; neotree
+(use-package neotree
+  :ensure t)
+(require 'neotree)
+(global-set-key [f8] 'neotree-toggle)
+(global-set-key [f9] 'neotree-refresh)
+
+;; Kill window and buffer in one keystroke
+(global-set-key (kbd "s-w") 'kill-buffer-and-window)
+
+;; Save and restore window layout
+(desktop-save-mode 1)
+
+;; buffer tabs
+(use-package tabbar
+  :ensure t)
+(require 'tabbar)
+(set-face-attribute
+   'tabbar-default nil
+    :background "gray60")
+(set-face-attribute
+   'tabbar-unselected nil
+    :background "gray85"
+     :foreground "gray30"
+      :box nil)
+(set-face-attribute
+   'tabbar-selected nil
+    :background "#f2f2f6"
+     :foreground "black"
+      :box nil)
+(set-face-attribute
+   'tabbar-button nil
+    :box '(:line-width 1 :color "gray72" :style released-button))
+(set-face-attribute
+   'tabbar-separator nil
+    :height 0.7)
+(tabbar-mode 1)
+;(tabbar-mode)
+(global-set-key [(control shift tab)] 'tabbar-backward)
+(global-set-key [(control tab)]       'tabbar-forward)
+
+;; tabbar ruler
+(use-package tabbar-ruler
+  :ensure t)
+(require 'tabbar-ruler)
+(setq tabbar-ruler-global-tabbar 't) ; If you want tabbar
+;(setq tabbar-ruler-global-ruler 't) ; if you want a global ruler
+;(setq tabbar-ruler-popup-menu 't) ; If you want a popup menu.
+;(setq tabbar-ruler-popup-toolbar 't) ; If you want a popup toolbar
+
+;; ----- Added by Shantanu till this point -----
+
 
 ;; User customizations
 (when (file-exists-p "~/.emacs.d/init-user.el")
