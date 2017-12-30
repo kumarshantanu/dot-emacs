@@ -16,6 +16,7 @@
 - Neotree file browser (F8: Toggle display, F9: Refresh content)
 - Enable strictly 2-space auto indentation
 - Close buffer and window in one keystroke (Cmd+w)
+- Save and restore window layout by default
 - Pin Clojure extensions to stable versions
   - Cider
   - Clj-refactor

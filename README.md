@@ -18,12 +18,18 @@ Based on https://gitlab.com/nilenso/dotemacs and some additions and changes.
 
 ## Customization
 
-Create a file `init-user.el` file with custom changes.
+Create a file `init-user.el` file with any custom changes.
 
-If you do not want whitespace markers, put the following to `init-user.el`:
+To disable whitespace markers, put the following to `init-user.el`:
 
 ```elisp
 (global-whitespace-mode 0)
+```
+
+To stop restoring window layout, put the following to `init-user.el`:
+
+```elisp
+(desktop-save-mode 0)
 ```
 
 
