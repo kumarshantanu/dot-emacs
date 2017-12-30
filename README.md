@@ -12,7 +12,7 @@ Based on https://gitlab.com/nilenso/dotemacs and some additions and changes.
     - Windows: Download from https://www.gnu.org/software/emacs/download.html
     - Linux: Use the OS package manager
 1. Backup and remove any existing `~/.emacs.d` directory.
-2. Run `git clone https://github.com/kumarshantanu/dot-emacs.git ~/.emacd.d`
+2. Run `git clone https://github.com/kumarshantanu/dot-emacs.git ~/.emacs.d`
 3. Starts Emacs and let it download and setup everything.
 
 
