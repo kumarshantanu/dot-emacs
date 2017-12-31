@@ -5,7 +5,7 @@
 - [Todo] Add inf-clojure (Inferior Clojure mode)
 
 
-## [WIP] 0.2.1 / 2017-December-??
+## 0.2.1 / 2017-December-31
 
 - Add keyboard shortcut to delete selected text (Ctrl+Alt+Backspace)
 - Use tip to make Emacs faster by disabling font-lock verbosity

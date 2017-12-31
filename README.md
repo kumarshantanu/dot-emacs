@@ -34,15 +34,15 @@ Create a file `init-user.el` file with any custom changes, e.g. the following:
 
 ## Usage
 
-Shrink contiguous whitespace into single space: `C-M-SPC` (Ctrl+Alt+Space)
-
-NeoTree: `F8` Show/hide, `F9` Refresh, Doc: https://github.com/jaypei/emacs-neotree
-
-Close current buffer and window: `s-w` (Cmd+w)
-
-Delete selected text: `C-M-backspace` (Ctrl+Alt+Backspace)
-
-Projectile help page: `C-c p C-h`
+| Description                                    | Shortcut key               |
+|------------------------------------------------|----------------------------|
+| Shrink contiguous whitespace into single space | `C-M-SPC` (Ctrl+Alt+Space) |
+| Delete selected text                 | `C-M-backspace` (Ctrl+Alt+Backspace) |
+| Neotree docs: https://github.com/jaypei/emacs-neotree |                     |
+| NeoTree show/hide                              | `F8`                       |
+| NeoTree refresh from filesystem                | `F9`                       |
+| Close current buffer and window                | `s-w` (Cmd+w)              |
+| Projectile help (commands work in Git repo)    | `C-c p C-h`                |
 
 ### CIDER/nREPL connection
 
