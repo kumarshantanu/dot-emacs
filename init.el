@@ -267,6 +267,13 @@
 ; Make emacs faster (tip by Stuart Sierra)
 (setq font-lock-verbose nil)
 
+;;; Modernization - http://xahlee.org/emacs/emacs_make_modern.html
+;; Disable autosave
+(setq make-backup-files nil) ; stop creating those backup~ files
+(setq auto-save-default nil) ; stop creating those #autosave# files
+;; Show recently opened files in a  menu
+(recentf-mode 1)
+
 ;; Save and restore window layout
 (desktop-save-mode 1)
 

@@ -9,7 +9,7 @@
 
 - Add keyboard shortcut to delete selected text (Ctrl+Alt+Backspace)
 - Use tip to make Emacs faster by disabling font-lock verbosity
-- [Todo] Add modernization config (disable autosave etc.) from emacs24-config
+- Disable autosave
 
 
 ## 0.2.0 / 2017-December-30
