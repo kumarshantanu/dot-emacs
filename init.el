@@ -264,6 +264,9 @@
 ;; Delete selected text
 (global-set-key [C-M-backspace] 'delete-region)
 
+; Make emacs faster (tip by Stuart Sierra)
+(setq font-lock-verbose nil)
+
 ;; Save and restore window layout
 (desktop-save-mode 1)
 
