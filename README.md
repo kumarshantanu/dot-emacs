@@ -40,6 +40,8 @@ NeoTree: `F8` Show/hide, `F9` Refresh, Doc: https://github.com/jaypei/emacs-neot
 
 Close current buffer and window: `s-w` (Cmd+w)
 
+Delete selected text: `C-M-backspace` (Ctrl+Alt+Backspace)
+
 Projectile help page: `C-c p C-h`
 
 ### CIDER/nREPL connection

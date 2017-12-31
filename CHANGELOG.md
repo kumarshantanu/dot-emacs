@@ -7,7 +7,7 @@
 
 ## [WIP] 0.2.1 / 2017-December-??
 
-- [Todo] Add shortcut to delete without kill https://stackoverflow.com/questions/637351/emacs-how-to-delete-text-without-kill-ring
+- Add keyboard shortcut to delete selected text (Ctrl+Alt+Backspace)
 - [Todo] Add modernization config (disable autosave etc.) from emacs24-config
 
 

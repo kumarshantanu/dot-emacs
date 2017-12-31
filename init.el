@@ -261,6 +261,9 @@
 ;; Kill window and buffer in one keystroke
 (global-set-key (kbd "s-w") 'kill-buffer-and-window)
 
+;; Delete selected text
+(global-set-key [C-M-backspace] 'delete-region)
+
 ;; Save and restore window layout
 (desktop-save-mode 1)
 
