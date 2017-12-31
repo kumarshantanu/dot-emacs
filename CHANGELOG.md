@@ -5,6 +5,12 @@
 - [Todo] Add inf-clojure (Inferior Clojure mode)
 
 
+## [WIP] 0.2.1 / 2017-December-??
+
+- [Todo] Add shortcut to delete without kill https://stackoverflow.com/questions/637351/emacs-how-to-delete-text-without-kill-ring
+- [Todo] Add modernization config (disable autosave etc.) from emacs24-config
+
+
 ## 0.2.0 / 2017-December-30
 
 - Set Home/End keys to behave as beginning/end of line respectively
