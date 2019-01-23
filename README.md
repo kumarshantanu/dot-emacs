@@ -44,7 +44,24 @@ Create a file `init-user.el` file with any custom changes, e.g. the following:
 | Close current buffer and window                | `s-w` (Cmd+w)              |
 | Projectile help (commands work in Git repo)    | `C-c p C-h`                |
 
-### CIDER/nREPL connection
+### inf-clojure (Enabled by default)
+
+Disable inf-clojure (in `init.el`, only one can be enabled) by commenting out and restarting Emacs:
+
+```elisp
+(require 'init-cider)
+;; (require 'init-inf-clojure)
+```
+
+### CIDER/nREPL connection (Disabled by default)
+
+Enable CIDER (in `init.el`, only one can be enabled) by commenting out and restarting Emacs:
+
+```elisp
+(require 'init-cider)
+;; (require 'init-inf-clojure)
+```
+
 
 To connect via [Cider](https://cider.readthedocs.io/en/latest/) add the following
 entry (update versions as appropriate) in `~/.lein/profiles.clj` file:
