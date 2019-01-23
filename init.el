@@ -226,6 +226,14 @@
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
 
+;; vue.js
+(use-package vue-mode
+  :config
+  (setq mmm-submode-decoration-level 2)
+  (add-hook 'mmm-mode-hook
+    (lambda ()
+      (set-face-background 'mmm-default-submode-face "#fafafa"))))
+
 ;; neotree
 (use-package neotree
   :ensure t)
