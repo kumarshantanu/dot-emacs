@@ -4,7 +4,7 @@
 
 None
 
-## [WIP] 0.3.0 / 2019-January-??
+## 0.3.0 / 2019-January-23
 
 - Add inf-clojure (Inferior Clojure mode)
   - Enable inf-clojure by default
