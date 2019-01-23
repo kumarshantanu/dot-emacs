@@ -2,7 +2,13 @@
 
 ## TODO
 
-- [Todo] Add inf-clojure (Inferior Clojure mode)
+None
+
+## [WIP] 0.3.0 / 2019-January-??
+
+- Add inf-clojure (Inferior Clojure mode)
+- Enable inf-clojure by default
+- Disable CIDER by default
 
 
 ## 0.2.1 / 2017-December-31
