@@ -234,6 +234,13 @@
     (lambda ()
       (set-face-background 'mmm-default-submode-face "#fafafa"))))
 
+;; treemacs
+(use-package treemacs
+  :ensure t)
+(require 'treemacs)
+(global-set-key [f4] 'treemacs)
+(global-set-key [f5] 'treemacs-refresh)
+
 ;; neotree
 (use-package neotree
   :ensure t)

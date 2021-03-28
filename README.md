@@ -39,6 +39,8 @@ Create a file `init-user.el` file with any custom changes, e.g. the following:
 | Shrink contiguous whitespace into single space | `C-M-SPC` (Ctrl+Alt+Space) |
 | Delete selected text                 | `C-M-backspace` (Ctrl+Alt+Backspace) |
 | Neotree docs: https://github.com/jaypei/emacs-neotree |                     |
+| Treemacs show/hide                             | `F4`                       |
+| Treemacs refresh from filesystem               | `F5`                       |
 | NeoTree show/hide                              | `F8`                       |
 | NeoTree refresh from filesystem                | `F9`                       |
 | Close current buffer and window                | `s-w` (Cmd+w)              |
