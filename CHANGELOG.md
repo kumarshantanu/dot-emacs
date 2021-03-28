@@ -4,6 +4,11 @@
 
 None
 
+## 0.3.1 / 2021-March-28
+
+- Add Treemacs for file browsing
+
+
 ## 0.3.0 / 2019-January-23
 
 - Add inf-clojure (Inferior Clojure mode)
