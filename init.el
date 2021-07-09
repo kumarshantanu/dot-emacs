@@ -207,6 +207,10 @@
        (constrain-to-field nil orig-pos t)))))
 (global-set-key (kbd "C-M-SPC") 'multi-line-just-one-space)
 
+;; Keyboard shortcut <-/
+;; Comment/uncomment toggle for marked/selected region
+(global-set-key (kbd "M-/") 'comment-or-uncomment-region)
+
 ;; Strictly 2-space indentation
 (setq-default indent-tabs-mode nil)
 (setq clojure-defun-style-default-indent t)
