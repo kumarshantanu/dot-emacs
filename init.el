@@ -96,6 +96,10 @@
   :ensure t)
 
 
+;; Set background colour for (selected) region
+(set-face-attribute 'region nil :background "#ccc")
+
+
 ;; Highlight matching parentheses
 (require 'paren)
 (show-paren-mode 1)
