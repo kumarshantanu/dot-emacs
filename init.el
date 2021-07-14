@@ -230,6 +230,17 @@
          ("\\.markdown\\'" . markdown-mode))
   :init (setq markdown-command "multimarkdown"))
 
+;; plant-uml
+(use-package plantuml-mode)
+;; Enable plantuml-mode for PlantUML files
+(add-to-list 'auto-mode-alist '("\\.plantuml\\'" . plantuml-mode))
+(add-to-list 'auto-mode-alist '("\\.puml\\'" . plantuml-mode))
+;; JAR mode
+(setq  plantuml-jar-path "~/.emacs.d/plantuml.jar")
+(unless (file-readable-p "~/.emacs.d/plantuml.jar")
+  (plantuml-download-jar))
+(setq plantuml-default-exec-mode 'jar)
+
 ;; vue.js
 (use-package vue-mode
   :config
