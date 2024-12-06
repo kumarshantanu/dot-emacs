@@ -12,8 +12,9 @@
 ;; Load and activate emacs packages. Do this first so that the
 ;; packages are loaded before you start trying to modify them.
 ;; This also sets the load path.
+(setq gnutls-algorithm-priority "NORMAL:-VERS-TLS1.3")
+(setq package-check-signature nil)
 (package-initialize)
-
 ;; Automatically reload files when they change on disk
 (global-auto-revert-mode 1)
 (setq auto-revert-verbose nil)
@@ -22,7 +23,10 @@
 ;; Install use-package
 (unless (package-installed-p 'use-package)
   (package-refresh-contents)
+  (package-install 'gnu-elpa-keyring-update)
   (package-install 'use-package))
+; could be right after (package-refresh-contents), here for unconditional
+(setq package-check-signature 'allow-unsigned)
 (require 'use-package)
 (setq use-package-verbose t)
 (setq-default use-package-always-ensure t)
