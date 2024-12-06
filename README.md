@@ -69,8 +69,8 @@ To connect via [Cider](https://cider.readthedocs.io/en/latest/) add the followin
 entry (update versions as appropriate) in `~/.lein/profiles.clj` file:
 
 ```clojure
-:repl {:plugins [[cider/cider-nrepl "0.16.0"]
-                 [refactor-nrepl    "2.3.1"]]}
+:repl {:plugins [[cider/cider-nrepl "0.50.3"]
+                 [refactor-nrepl    "3.10.0"]]}
 ```
 
 **Note:**
@@ -81,6 +81,6 @@ If the file `~/.lein/profiles.clj` does not exist already, then create one with 
 following content (update versions as appropriate):
 
 ```clojure
-{:repl {:plugins [[cider/cider-nrepl "0.16.0"]
-                  [refactor-nrepl    "2.3.1"]]}}
+{:repl {:plugins [[cider/cider-nrepl "0.50.3"]
+                  [refactor-nrepl    "3.10.0"]]}}
 ```
