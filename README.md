@@ -1,6 +1,6 @@
 # dot-emacs
 
-A lean setup for Clojurians.
+A lean setup for Clojurians. Supports Emacs 26 or higher.
 
 Based on https://gitlab.com/nilenso/dotemacs and some additions and changes.
 

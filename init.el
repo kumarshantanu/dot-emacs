@@ -45,7 +45,8 @@
 
 
 ;; Line numbers
-(global-linum-mode t)
+; (global-linum-mode t)  ; on Emacs 28 or older
+(global-display-line-numbers-mode 1)  ; on Emacs 26 or later
 
 
 ;; Remove trailing whitespace before saving
